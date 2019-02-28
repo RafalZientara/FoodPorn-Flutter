@@ -1,4 +1,4 @@
-package com.apps.sample.zientara.rafal.foodpornflutter;
+package com.apps.sample.zientara.rafal.flutter_app;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
