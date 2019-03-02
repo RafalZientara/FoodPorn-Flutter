@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/data/liker.dart';
 import 'package:flutter_app/model/food.dart';
 
 class FoodTile extends StatefulWidget {
@@ -68,6 +69,7 @@ class FoodTileState extends State<FoodTile> {
   void likeFood() {
     setState(() {
       widget.food.liked = !widget.food.liked;
+      Liker.of(context).likesCounter.addLike();
     });
   }
 }
