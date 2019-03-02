@@ -41,6 +41,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/data/data.json
     - assets/befsztyk.jpg
     - assets/churros.jpg
     - assets/fried-chicken.jpg

@@ -1,7 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/model/Food.dart';
+import 'package:flutter_app/food_tile.dart';
+import 'package:flutter_app/model/food.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,18 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Food Porn App',
+      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Food Porn'),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
-
   final String title;
 
   @override
@@ -29,17 +29,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final feed = List<int>.generate(10000, (i) => i);
+  final foods = List<Food>();
 
-//  var feed = List<Food>();
-  static const images = <String>[
-    "assets/befsztyk.jpg",
-    "assets/churros.jpg",
-    "assets/fried-chicken.jpg",
-    "assets/fries.jpg",
-    "assets/hamburger.jpg",
-    "assets/pizza.jpg",
-  ];
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    loadFood();
+  }
 
   void loadFood() async {
     var input =
@@ -47,66 +51,52 @@ class _MyHomePageState extends State<MyHomePage> {
     final parsed = json.decode(await input).cast<Map<String, dynamic>>();
     var list =
         parsed.map<Food>((json) => Food.fromJson(json)).toList() as List<Food>;
-    print("lol mam jedzenie $list");
     setState(() {
-//      feed.add(Food("Pizza!", "Pie pie pie!"));
-//      feed.add(Food("Pizza!", "Pie pie pie!"));
-//      feed.add(Food("Pizza!", "Pie pie pie!"));
-//      feed.clear();
-//      feed.addAll(list);
-//      feed = list;
+      foods.clear();
+      foods.addAll(list);
     });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    print("initState");
-    loadFood();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-        ),
-        body: feed.length == 0 ? buildLoadingScreen() : buildListView());
+      appBar: buildAppBar(),
+      body: buildListView(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      title: Container(
+          child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Text('Food porn'),
+          Row(
+            children: <Widget>[
+              Icon(
+                Icons.favorite,
+                color: Colors.redAccent,
+              ),
+              Text(_counter.toString()),
+            ],
+          )
+        ],
+      )),
+    );
   }
 
   ListView buildListView() {
     return ListView.builder(
-      itemCount: feed.length,
+      itemCount: foods.length,
       itemBuilder: (context, index) {
-        return InkWell(
-          onTap: () async => {
-//            Navigator.of(context).push(buildLoadingScreen())
-              },
-          child: Column(
-            children: <Widget>[
-              GestureDetector(
-                onDoubleTap: () {
-                  likeFood(index);
-                },
-                  child: Image.asset(images[index % images.length])),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-//                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    Text("Food nr $index"),
-//                  Text("Food nr " + feed[index].name),
-                    IconButton(
-                      icon: Icon(Icons.favorite),
-                      color:
-                          (index % 2 == 0) ? Colors.redAccent : Colors.blueGrey,
-                      onPressed: () {likeFood(index);},
-                    )
-                  ],
-                ),
-              )
-            ],
-          ),
+        return FoodTile(
+          food: foods[index],
         );
       },
     );
@@ -114,13 +104,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void likeFood(int index) {
     setState(() {
-      feed[index]++;
+      foods[index].liked = !foods[index].liked;
+//      foods[index].liked = !foods[index].liked;
     });
-  }
-
-  Widget buildLoadingScreen() {
-    return Center(
-      child: CircularProgressIndicator(),
-    );
   }
 }
