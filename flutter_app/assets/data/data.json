@@ -1,0 +1,394 @@
+[
+  {
+    "_id": "5c799e69d5fdc67b8f91668f",
+    "index": 0,
+    "liked": false,
+    "calories": 1846,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69a1464e28e3dcfae9",
+    "index": 1,
+    "liked": false,
+    "calories": 1340,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69bc94d495f993304a",
+    "index": 2,
+    "liked": false,
+    "calories": 1451,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e697c1b45be4d11a08f",
+    "index": 3,
+    "liked": false,
+    "calories": 2871,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e6942ed30e47fd7c396",
+    "index": 4,
+    "liked": false,
+    "calories": 2709,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69e9de2a507ee89243",
+    "index": 5,
+    "liked": true,
+    "calories": 1242,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e6934b00f8fbda9f6ca",
+    "index": 6,
+    "liked": false,
+    "calories": 1898,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69fc5b0ac8ac31d260",
+    "index": 7,
+    "liked": false,
+    "calories": 1756,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69a9f400ce2c0e1520",
+    "index": 8,
+    "liked": false,
+    "calories": 1230,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69676df1be263ee540",
+    "index": 9,
+    "liked": true,
+    "calories": 659,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69390cdd5a562d9109",
+    "index": 10,
+    "liked": false,
+    "calories": 1017,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69223dce5d7c71f93a",
+    "index": 11,
+    "liked": true,
+    "calories": 650,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69b11e5b4bf1b80768",
+    "index": 12,
+    "liked": false,
+    "calories": 2889,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69fbf800ca7f432d77",
+    "index": 13,
+    "liked": false,
+    "calories": 1173,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e692a9eb6597e736e28",
+    "index": 14,
+    "liked": false,
+    "calories": 2980,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69867fdbf15ad1f881",
+    "index": 15,
+    "liked": true,
+    "calories": 539,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69860463b8a5530017",
+    "index": 16,
+    "liked": true,
+    "calories": 2120,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e6981c5f49180130cfb",
+    "index": 17,
+    "liked": false,
+    "calories": 2075,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69faf398ba06487867",
+    "index": 18,
+    "liked": false,
+    "calories": 697,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e6983e8c50a2fa2362c",
+    "index": 19,
+    "liked": true,
+    "calories": 2060,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e696d1f40f1d68ec974",
+    "index": 20,
+    "liked": false,
+    "calories": 1585,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e6960bd39425501372f",
+    "index": 21,
+    "liked": false,
+    "calories": 1094,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e6953b5f1d7dd516b79",
+    "index": 22,
+    "liked": false,
+    "calories": 2978,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e693d22861941aef457",
+    "index": 23,
+    "liked": true,
+    "calories": 2243,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69561ae05a2a397b2e",
+    "index": 24,
+    "liked": false,
+    "calories": 777,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e697bccd22ef111ad74",
+    "index": 25,
+    "liked": true,
+    "calories": 750,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69f33b8b53f464ccbf",
+    "index": 26,
+    "liked": true,
+    "calories": 1906,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e6960783dae680c3063",
+    "index": 27,
+    "liked": false,
+    "calories": 2770,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e695d9e888c4fd4c022",
+    "index": 28,
+    "liked": true,
+    "calories": 1808,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69fa9d71f416c5805c",
+    "index": 29,
+    "liked": true,
+    "calories": 2021,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69a12a7f2b2cc3fd28",
+    "index": 30,
+    "liked": true,
+    "calories": 1201,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69d9edf85ade99594f",
+    "index": 31,
+    "liked": true,
+    "calories": 2629,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e6914e072e9fd151ab2",
+    "index": 32,
+    "liked": false,
+    "calories": 2247,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e690fa2f2db3c5f21e8",
+    "index": 33,
+    "liked": false,
+    "calories": 2671,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e6966ce669c10d3a96a",
+    "index": 34,
+    "liked": true,
+    "calories": 576,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69a0ca53928d97acda",
+    "index": 35,
+    "liked": false,
+    "calories": 1985,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69c1094c5b7310d5f6",
+    "index": 36,
+    "liked": true,
+    "calories": 2892,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e695ea3c5540891bfeb",
+    "index": 37,
+    "liked": false,
+    "calories": 1109,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69a37faf227cdca0fd",
+    "index": 38,
+    "liked": true,
+    "calories": 425,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69d6a5dda21f8b0def",
+    "index": 39,
+    "liked": true,
+    "calories": 849,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69ed9df5303d32beb3",
+    "index": 40,
+    "liked": true,
+    "calories": 2601,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e699820c1f413cce633",
+    "index": 41,
+    "liked": true,
+    "calories": 2100,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69e49c9ed321c774b5",
+    "index": 42,
+    "liked": false,
+    "calories": 2622,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e693a66f0388c93a242",
+    "index": 43,
+    "liked": true,
+    "calories": 2773,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e697742e4d16452447f",
+    "index": 44,
+    "liked": true,
+    "calories": 2681,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69bec35a5b350837bf",
+    "index": 45,
+    "liked": false,
+    "calories": 672,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69938d206be465b6af",
+    "index": 46,
+    "liked": true,
+    "calories": 1940,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69548d534fe2bed6cc",
+    "index": 47,
+    "liked": true,
+    "calories": 1336,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69f23915a6e5fa0016",
+    "index": 48,
+    "liked": false,
+    "calories": 1020,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69d6d5453fe1646e32",
+    "index": 49,
+    "liked": false,
+    "calories": 2812,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69240b6f07c2796b20",
+    "index": 50,
+    "liked": false,
+    "calories": 1356,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e692977461ac6ab7b14",
+    "index": 51,
+    "liked": false,
+    "calories": 1137,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e69bebbc36c4d6e3541",
+    "index": 52,
+    "liked": true,
+    "calories": 2267,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e690350c8e956943e14",
+    "index": 53,
+    "liked": false,
+    "calories": 2070,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e6997331c6e840f4398",
+    "index": 54,
+    "liked": true,
+    "calories": 2132,
+    "picture": "http://placehold.it/128x128"
+  },
+  {
+    "_id": "5c799e694638ecee996c53eb",
+    "index": 55,
+    "liked": true,
+    "calories": 1941,
+    "picture": "http://placehold.it/128x128"
+  }
+]

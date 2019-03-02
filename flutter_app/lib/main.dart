@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_app/model/Food.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,46 +29,98 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final items = List<String>.generate(10000, (i) => "Item $i");
-  int _counter = 0;
+  final feed = List<int>.generate(10000, (i) => i);
 
-  void _incrementCounter() {
+//  var feed = List<Food>();
+  static const images = <String>[
+    "assets/befsztyk.jpg",
+    "assets/churros.jpg",
+    "assets/fried-chicken.jpg",
+    "assets/fries.jpg",
+    "assets/hamburger.jpg",
+    "assets/pizza.jpg",
+  ];
+
+  void loadFood() async {
+    var input =
+        DefaultAssetBundle.of(context).loadString("assets/data/data.json");
+    final parsed = json.decode(await input).cast<Map<String, dynamic>>();
+    var list =
+        parsed.map<Food>((json) => Food.fromJson(json)).toList() as List<Food>;
+    print("lol mam jedzenie $list");
     setState(() {
-      _counter++;
+//      feed.add(Food("Pizza!", "Pie pie pie!"));
+//      feed.add(Food("Pizza!", "Pie pie pie!"));
+//      feed.add(Food("Pizza!", "Pie pie pie!"));
+//      feed.clear();
+//      feed.addAll(list);
+//      feed = list;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    print("initState");
+    loadFood();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-          child: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return Column(
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: feed.length == 0 ? buildLoadingScreen() : buildListView());
+  }
+
+  ListView buildListView() {
+    return ListView.builder(
+      itemCount: feed.length,
+      itemBuilder: (context, index) {
+        return InkWell(
+          onTap: () async => {
+//            Navigator.of(context).push(buildLoadingScreen())
+              },
+          child: Column(
             children: <Widget>[
-              Image.asset("assets/churros.jpg"),
+              GestureDetector(
+                onDoubleTap: () {
+                  likeFood(index);
+                },
+                  child: Image.asset(images[index % images.length])),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
 //                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
-                    Text("Food nr " + items[index]),
+                    Text("Food nr $index"),
+//                  Text("Food nr " + feed[index].name),
                     IconButton(
                       icon: Icon(Icons.favorite),
-                      color: Colors.redAccent,
-                      onPressed: () {},
+                      color:
+                          (index % 2 == 0) ? Colors.redAccent : Colors.blueGrey,
+                      onPressed: () {likeFood(index);},
                     )
                   ],
                 ),
               )
             ],
-          );
-        },
-      )),
+          ),
+        );
+      },
+    );
+  }
+
+  void likeFood(int index) {
+    setState(() {
+      feed[index]++;
+    });
+  }
+
+  Widget buildLoadingScreen() {
+    return Center(
+      child: CircularProgressIndicator(),
     );
   }
 }
