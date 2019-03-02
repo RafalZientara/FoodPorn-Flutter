@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      Liker.of(context).likesCounter.addLike();
+//      Liker.of(context).likesCounter.addLike();
     });
   }
 
@@ -86,7 +86,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 Icons.favorite,
                 color: Colors.redAccent,
               ),
-              Text(liker.likesCounter.likesCount.toString()),
+              StreamBuilder<int>(
+                initialData: 0,
+                stream: liker.likesCounter.likesCount,
+                builder: (context, snapshot) {
+                  return Text(snapshot.data.toString());
+                }
+              ),
             ],
           )
         ],
@@ -108,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void likeFood(int index) {
     setState(() {
       foods[index].liked = !foods[index].liked;
-//      foods[index].liked = !foods[index].liked;
+
     });
   }
 }
