@@ -1,10 +1,12 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/data/liker.dart';
 import 'package:flutter_app/data/likes_counter.dart';
 import 'package:flutter_app/fav_icon.dart';
-import 'package:flutter_app/food_tile.dart';
+import 'package:flutter_app/screen/food_page.dart';
+import 'package:flutter_app/tile/food_tile.dart';
 import 'package:flutter_app/model/food.dart';
 
 void main() => runApp(MyApp());
@@ -21,6 +23,9 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: MyHomePage(title: 'Flutter Demo Home Page'),
+        routes: <String, WidgetBuilder>{
+          FoodPage.routeName: (context) => FoodPage()
+        },
       ),
     );
   }
@@ -35,8 +40,25 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  static const images = <String>[
+    "assets/befsztyk.jpg",
+    "assets/churros.jpg",
+    "assets/fried-chicken.jpg",
+    "assets/fries.jpg",
+    "assets/hamburger.jpg",
+    "assets/pizza.jpg",
+  ];
+
   void _addRandomFood() {
-    var food = Food("id", 5, "name", "description", false, 1500, "picture");
+    Random random = new Random();
+    var randomInt = random.nextInt(1500100900);
+    var food = Food("id$randomInt",
+        randomInt,
+        "Name",
+        "description",
+        false,
+        random.nextInt(5000),
+        images[random.nextInt(images.length)]);
     Liker.of(context).likesCounter.addFood(food);
   }
 

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/animated_state.dart';
 import 'package:flutter_app/data/liker.dart';
-import 'package:flutter_app/fav_tile_icon.dart';
+import 'package:flutter_app/screen/food_page.dart';
+import 'package:flutter_app/tile/fav_tile_icon.dart';
 import 'package:flutter_app/model/food.dart';
 
 class FoodTile extends StatefulWidget {
@@ -21,26 +22,20 @@ class FoodTile extends StatefulWidget {
 }
 
 class FoodTileState extends AnimatedState<FoodTile> {
-  static const images = <String>[
-    "assets/befsztyk.jpg",
-    "assets/churros.jpg",
-    "assets/fried-chicken.jpg",
-    "assets/fries.jpg",
-    "assets/hamburger.jpg",
-    "assets/pizza.jpg",
-  ];
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => {},
+      onTap: () {
+        Navigator.of(context).pushNamed(FoodPage.routeName);
+      },
       child: Column(
         children: <Widget>[
           GestureDetector(
             onDoubleTap: () {
               changeLike();
             },
-            child: Image.asset(images[widget.food.index % images.length]),
+            child: Image.asset(widget.food.picture),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
