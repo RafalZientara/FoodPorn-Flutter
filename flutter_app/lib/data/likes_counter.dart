@@ -4,6 +4,7 @@ import 'package:flutter_app/model/food.dart';
 import 'package:rxdart/rxdart.dart';
 
 class LikesCounter {
+  Food currentFood;
   final _allFoods = List<Food>();
   final _favFoods = List<Food>();
 

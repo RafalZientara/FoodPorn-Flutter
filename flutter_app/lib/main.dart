@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/data/liker.dart';
 import 'package:flutter_app/data/likes_counter.dart';
 import 'package:flutter_app/fav_icon.dart';
+import 'package:flutter_app/model/food.dart';
 import 'package:flutter_app/screen/food_page.dart';
 import 'package:flutter_app/tile/food_tile.dart';
-import 'package:flutter_app/model/food.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,13 +52,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void _addRandomFood() {
     Random random = new Random();
     var randomInt = random.nextInt(1500100900);
-    var food = Food("id$randomInt",
-        randomInt,
-        "Name",
-        "description",
-        false,
-        random.nextInt(5000),
-        images[random.nextInt(images.length)]);
+    var food = Food("id$randomInt", randomInt, "Name", "description", false,
+        random.nextInt(5000), images[random.nextInt(images.length)]);
     Liker.of(context).likesCounter.addFood(food);
   }
 

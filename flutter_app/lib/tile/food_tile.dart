@@ -27,6 +27,7 @@ class FoodTileState extends AnimatedState<FoodTile> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        Liker.of(context).likesCounter.currentFood = widget.food;
         Navigator.of(context).pushNamed(FoodPage.routeName);
       },
       child: Column(

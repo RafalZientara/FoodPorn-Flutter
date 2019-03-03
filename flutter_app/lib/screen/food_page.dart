@@ -1,22 +1,19 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_app/model/food.dart';
+import 'package:flutter_app/data/liker.dart';
 
 class FoodPage extends StatelessWidget {
-
   static const routeName = "/details";
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return Column(
-      children: <Widget>[
-        Image.asset("assets/fried-chicken.jpg"),
-        Image.asset("assets/fries.jpg"),
-        Text("Blah blah blah"),
-      ],
-    );
+    var food = Liker.of(context).likesCounter.currentFood;
+    return Scaffold(
+//        appBar: buildAppBar(liker),
+        body:  Column(
+          children: <Widget>[
+            Image.asset(food.picture),
+            Text("${food.name}"),
+          ],
+        ));
   }
-
-
 }
