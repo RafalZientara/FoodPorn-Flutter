@@ -30,7 +30,7 @@ class _FavIconState extends AnimatedState<FavIcon> {
               scale: buildAnimate(),
               child: Icon(
                 Icons.favorite,
-                color: Colors.redAccent,
+                color: widget.itemCount>0 ? Colors.redAccent : Colors.grey,
               ),
             ),
           ),

@@ -4,7 +4,7 @@
     "index": 0,
     "liked": false,
     "calories": 2914,
-    "name": "Krystal",
+    "name": "So good!",
     "description": "Reprehenderit veniam est incididunt laborum proident ut dolor excepteur cupidatat elit. Do commodo cillum culpa ex ex reprehenderit ullamco irure consequat non. Ullamco duis incididunt ea occaecat.",
     "picture": "assets/hamburger.jpg"
   },
@@ -13,7 +13,7 @@
     "index": 1,
     "liked": false,
     "calories": 2662,
-    "name": "Wolf",
+    "name": "Give me this!",
     "description": "Velit sit eiusmod labore excepteur excepteur eiusmod laboris aliqua et duis enim cupidatat pariatur sint. Voluptate exercitation in anim magna aute aliquip. Sint veniam quis exercitation esse nisi proident. Occaecat velit et eu veniam tempor consequat nostrud minim tempor qui incididunt ipsum proident. Lorem sint ea exercitation incididunt reprehenderit adipisicing do excepteur proident esse ea. Eu eiusmod velit Lorem eiusmod. Mollit aliquip reprehenderit mollit ullamco ex ut dolore minim nostrud reprehenderit.",
     "picture": "assets/pizza.jpg"
   },
@@ -22,7 +22,7 @@
     "index": 2,
     "liked": false,
     "calories": 2747,
-    "name": "Duffy",
+    "name": "So crispy and delicious!",
     "description": "Nisi et adipisicing enim veniam non officia irure tempor. Incididunt esse esse velit labore ullamco ullamco veniam aute tempor aliqua reprehenderit. Mollit consequat in consequat ex incididunt eiusmod mollit incididunt nisi velit ea laborum eiusmod adipisicing. Enim consectetur cupidatat qui esse. Dolore eu officia esse labore enim sit laborum minim id laborum cillum adipisicing cillum ad.",
     "picture": "assets/churros.jpg"
   },
@@ -31,7 +31,7 @@
     "index": 3,
     "liked": false,
     "calories": 1208,
-    "name": "Lesley",
+    "name": "OMG!",
     "description": "Elit amet veniam fugiat aute. Minim laboris non non deserunt et. Minim excepteur nostrud non id. Quis laborum in quis irure amet officia irure quis in nostrud fugiat exercitation sint. Mollit tempor deserunt id incididunt. Quis aute sint amet occaecat deserunt ullamco nostrud adipisicing deserunt irure cupidatat laboris anim quis. Dolore esse dolor quis velit nostrud dolor non.",
     "picture": "assets/befsztyk.jpg"
   },
@@ -40,34 +40,35 @@
     "index": 4,
     "liked": false,
     "calories": 1722,
-    "name": "Adriana",
+    "name": "I could kill for this!",
     "description": "Laboris duis cupidatat dolor ipsum incididunt reprehenderit occaecat elit enim non nostrud ipsum qui. Fugiat irure qui ipsum voluptate velit quis aliqua amet excepteur deserunt sunt voluptate proident duis. Cupidatat enim reprehenderit cillum laborum ut cillum aliquip do quis id esse ad. Laborum proident consectetur occaecat cillum labore do excepteur labore commodo.",
     "picture": "assets/churros.jpg"
+  },
+
+  {
+    "_id": "5c7bebc5c598d4c35fbbc64f",
+    "index": 6,
+    "liked": false,
+    "calories": 665,
+    "name": "Show me these legs!",
+    "description": "Magna nulla ut aliquip cillum labore fugiat non qui dolor eiusmod ut sit id officia. Veniam reprehenderit duis consequat esse sit. Occaecat aliqua cupidatat ipsum eiusmod adipisicing consectetur dolore. Do ea voluptate ipsum duis consequat duis sunt adipisicing sint et mollit nulla nisi. Occaecat excepteur est eiusmod in consectetur incididunt excepteur. Reprehenderit pariatur velit qui ea adipisicing consequat minim aute et qui. Officia commodo ad nisi ipsum do fugiat eiusmod.",
+    "picture": "assets/fried-chicken.jpg"
   },
   {
     "_id": "5c7bebc5f3ecc679c55b7436",
     "index": 5,
     "liked": false,
     "calories": 1881,
-    "name": "Love",
+    "name": "Love <3",
     "description": "Ullamco voluptate et labore anim eiusmod laboris officia cillum tempor ut minim occaecat. Labore incididunt proident fugiat dolore eu aliqua sint quis. Est sit enim sunt occaecat esse sit. Veniam aute officia ea enim non ex mollit mollit enim eiusmod. Eu ex laboris tempor aliquip excepteur consectetur laborum cupidatat duis aute Lorem voluptate pariatur id. Fugiat irure duis labore qui ad anim ipsum ex ad.",
     "picture": "assets/churros.jpg"
-  },
-  {
-    "_id": "5c7bebc5c598d4c35fbbc64f",
-    "index": 6,
-    "liked": false,
-    "calories": 665,
-    "name": "Brigitte",
-    "description": "Magna nulla ut aliquip cillum labore fugiat non qui dolor eiusmod ut sit id officia. Veniam reprehenderit duis consequat esse sit. Occaecat aliqua cupidatat ipsum eiusmod adipisicing consectetur dolore. Do ea voluptate ipsum duis consequat duis sunt adipisicing sint et mollit nulla nisi. Occaecat excepteur est eiusmod in consectetur incididunt excepteur. Reprehenderit pariatur velit qui ea adipisicing consequat minim aute et qui. Officia commodo ad nisi ipsum do fugiat eiusmod.",
-    "picture": "assets/fried-chicken.jpg"
   },
   {
     "_id": "5c7bebc5f6a00f7d11ad3894",
     "index": 7,
     "liked": false,
     "calories": 2166,
-    "name": "Ines",
+    "name": "So yellow, so tasty!",
     "description": "Lorem aliquip consequat aliquip duis pariatur veniam ut sint non. Officia Lorem consectetur ullamco deserunt ex. Amet adipisicing reprehenderit in dolore ex amet quis sint ipsum officia reprehenderit reprehenderit. Laborum ex pariatur incididunt in ea eiusmod laboris excepteur quis pariatur aliqua reprehenderit. Sit veniam mollit excepteur aliquip mollit nostrud elit sunt exercitation occaecat ex. Sint laboris do in culpa adipisicing pariatur id mollit occaecat excepteur velit id mollit.",
     "picture": "assets/fries.jpg"
   },
@@ -76,7 +77,7 @@
     "index": 8,
     "liked": false,
     "calories": 2324,
-    "name": "Barrett",
+    "name": "So much cheeeese!",
     "description": "Ea duis consectetur anim ad. Culpa anim qui culpa commodo elit. Do in voluptate aliqua ea sint proident nisi. Adipisicing id voluptate exercitation in in tempor laboris ipsum aute Lorem. Nisi eiusmod sit dolor ullamco esse cupidatat in. Nisi voluptate qui reprehenderit irure nulla eiusmod laboris aute mollit qui ad. Sint exercitation sit eu et nisi tempor amet.",
     "picture": "assets/pizza.jpg"
   },
@@ -85,7 +86,7 @@
     "index": 9,
     "liked": false,
     "calories": 890,
-    "name": "Mae",
+    "name": "Give me this!",
     "description": "Cupidatat id enim incididunt minim eu cillum dolore magna enim laborum. Voluptate fugiat adipisicing qui in elit deserunt minim reprehenderit. Tempor anim aliqua officia exercitation ea excepteur magna voluptate sunt. Voluptate nostrud nulla proident aliqua. Ad pariatur Lorem do cupidatat veniam reprehenderit minim. Officia voluptate enim nisi eiusmod quis aliqua anim ex voluptate. Est dolor amet officia elit consectetur enim proident ullamco qui nisi commodo pariatur dolore.",
     "picture": "assets/fries.jpg"
   },
@@ -94,7 +95,7 @@
     "index": 10,
     "liked": false,
     "calories": 2850,
-    "name": "Shelly",
+    "name": "Tasty homemade burgers",
     "description": "Culpa enim laboris aliquip proident enim est sunt anim eiusmod. Laborum excepteur proident occaecat sunt nulla aliquip id dolore velit. In aute minim excepteur magna amet aute labore. Do excepteur nisi ullamco dolor aliqua aliqua. Laborum ad fugiat amet deserunt cillum dolor veniam irure ad id aliquip ipsum eu velit. Dolore do fugiat ea dolor dolore incididunt proident ad officia aute consequat mollit laboris excepteur.",
     "picture": "assets/hamburger.jpg"
   },
@@ -103,7 +104,7 @@
     "index": 11,
     "liked": false,
     "calories": 1488,
-    "name": "Fern",
+    "name": "This is not homemade",
     "description": "Dolor culpa deserunt ullamco eu fugiat proident irure commodo. Sint non sint ipsum ipsum anim sint excepteur culpa id ex. Labore esse nulla amet deserunt. In do laborum ex eu culpa eiusmod sunt eu officia Lorem consectetur exercitation.",
     "picture": "assets/befsztyk.jpg"
   },
@@ -112,7 +113,7 @@
     "index": 12,
     "liked": false,
     "calories": 2234,
-    "name": "Oneil",
+    "name": "Mmmmmm....",
     "description": "Incididunt velit excepteur ea est irure exercitation aute magna minim sit. Consectetur labore est aliqua deserunt. Ad officia pariatur velit mollit.",
     "picture": "assets/fries.jpg"
   },
@@ -121,7 +122,7 @@
     "index": 13,
     "liked": false,
     "calories": 1348,
-    "name": "Cornelia",
+    "name": "More meat!",
     "description": "Ex velit sint ullamco ex exercitation consequat dolore incididunt sint fugiat dolor. Ex esse ut anim eiusmod nostrud officia voluptate cupidatat. Officia ea aute esse adipisicing qui duis deserunt. Cupidatat laboris nulla dolor elit magna culpa nostrud. Est officia minim ea ullamco ut. Laborum mollit ipsum deserunt laboris aliqua amet cillum culpa. Sit ex nisi duis nostrud dolore culpa nostrud dolore proident nostrud.",
     "picture": "assets/befsztyk.jpg"
   },
@@ -130,7 +131,7 @@
     "index": 14,
     "liked": false,
     "calories": 1108,
-    "name": "Olivia",
+    "name": "One roma please!",
     "description": "Amet ut duis ad nostrud ut ex esse nostrud est cillum quis. Laboris quis proident cupidatat amet do. Quis qui tempor ut irure dolore occaecat pariatur sit qui velit id.",
     "picture": "assets/pizza.jpg"
   },
