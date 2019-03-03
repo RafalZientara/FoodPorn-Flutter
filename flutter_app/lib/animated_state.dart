@@ -29,6 +29,7 @@ abstract class AnimatedState<T extends StatefulWidget>
     if (shouldAnimate(oldWidget)) {
       _animationController.reset();
       _animationController.forward();
+      onAnimationStarted();
     }
     super.didUpdateWidget(oldWidget);
   }
@@ -40,4 +41,6 @@ abstract class AnimatedState<T extends StatefulWidget>
     _animationController.dispose();
     super.dispose();
   }
+
+  void onAnimationStarted() {}
 }
