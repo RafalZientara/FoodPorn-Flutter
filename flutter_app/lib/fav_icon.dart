@@ -15,14 +15,26 @@ class FavIcon extends StatefulWidget {
   }
 }
 
-class _FavIconState extends State<FavIcon> {
+class _FavIconState extends State<FavIcon> with SingleTickerProviderStateMixin {
   AnimationController _animationController;
   Animation<double> _animation;
 
-  final Tween<Offset> _badgePositionTween = Tween(
-    begin: const Offset(-0.5, 0.9),
-    end: const Offset(0.0, 0.0),
+  final Tween<double> _badgePositionTween = Tween(
+    begin: 0.7,
+    end: 1.5,
   );
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      duration: const Duration(milliseconds: 1500),
+      vsync: this,
+    );
+    _animation =
+        CurvedAnimation(parent: _animationController, curve: Curves.elasticOut);
+    _animationController.forward();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +44,12 @@ class _FavIconState extends State<FavIcon> {
         overflow: Overflow.visible,
         children: <Widget>[
           Center(
-            child: Icon(
-              Icons.favorite,
-              color: Colors.redAccent,
+            child: ScaleTransition(
+              scale: _badgePositionTween.animate(_animation),
+              child: Icon(
+                Icons.favorite,
+                color: Colors.redAccent,
+              ),
             ),
           ),
           Positioned(
@@ -54,5 +69,20 @@ class _FavIconState extends State<FavIcon> {
         ],
       ),
     );
+  }
+
+  @override
+  void didUpdateWidget(FavIcon oldWidget) {
+    if (widget.itemCount != oldWidget.itemCount) {
+      _animationController.reset();
+      _animationController.forward();
+    }
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
   }
 }
