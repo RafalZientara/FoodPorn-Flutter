@@ -3,9 +3,11 @@ import 'package:flutter_app/animated_state.dart';
 
 class FavIcon extends StatefulWidget {
   final int itemCount;
+  final VoidCallback onPressed;
 
   FavIcon({
     Key key,
+    this.onPressed,
     @required this.itemCount,
   })  : assert(itemCount >= 0),
         super(key: key);
@@ -28,9 +30,12 @@ class _FavIconState extends AnimatedState<FavIcon> {
           Center(
             child: ScaleTransition(
               scale: buildAnimate(),
-              child: Icon(
-                Icons.favorite,
-                color: widget.itemCount>0 ? Colors.redAccent : Colors.grey,
+              child: IconButton(
+                onPressed: widget.onPressed,
+                icon: Icon(
+                  Icons.favorite,
+                  color: widget.itemCount>0 ? Colors.redAccent : Colors.grey,
+                ),
               ),
             ),
           ),

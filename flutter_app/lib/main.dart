@@ -6,6 +6,7 @@ import 'package:flutter_app/data/liker.dart';
 import 'package:flutter_app/data/likes_counter.dart';
 import 'package:flutter_app/fav_icon.dart';
 import 'package:flutter_app/model/food.dart';
+import 'package:flutter_app/screen/fav_page.dart';
 import 'package:flutter_app/screen/food_page.dart';
 import 'package:flutter_app/tile/food_tile.dart';
 
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         ),
         home: MyHomePage(title: 'Flutter Demo Home Page'),
         routes: <String, WidgetBuilder>{
-          FoodPage.routeName: (context) => FoodPage()
+          FoodPage.routeName: (context) => FoodPage(),
+          FavPage.routeName: (context) => FavPage(),
         },
       ),
     );
@@ -97,7 +99,10 @@ class _MyHomePageState extends State<MyHomePage> {
               initialData: 0,
               stream: liker.likesCounter.likesCountStream,
               builder: (context, snapshot) {
-                return FavIcon(itemCount: snapshot.data);
+                return FavIcon(itemCount: snapshot.data,
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(FavPage.routeName);
+                  },);
               }),
         ])));
   }
