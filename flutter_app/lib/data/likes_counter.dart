@@ -4,37 +4,52 @@ import 'package:flutter_app/model/food.dart';
 import 'package:rxdart/rxdart.dart';
 
 class LikesCounter {
-  final favoriteFoods = List<Food>();
+  final _allFoods = List<Food>();
+  final _favFoods = List<Food>();
 
-  final items = BehaviorSubject<List<Food>>();
-  final likesBehaviorSubject = BehaviorSubject<int>();
-  final likesController = StreamController<Food>();
+  final _allItemsSubject = BehaviorSubject<List<Food>>();
+  final _favItemsSubject = BehaviorSubject<List<Food>>();
+  final _likesBehaviorSubject = BehaviorSubject<int>();
+  final _likesController = StreamController<Food>();
 
-  Stream<int> get likesCount => likesBehaviorSubject.stream;
+  Stream<int> get likesCountStream => _likesBehaviorSubject.stream;
 
-  Sink<Food> get likeAddition => likesController.sink;
+  Sink<Food> get likeAdditionSink => _likesController.sink;
 
-  ValueObservable<List<Food>> get favorites => items.stream;
+  ValueObservable<List<Food>> get favoritesStream => _favItemsSubject.stream;
+
+  ValueObservable<List<Food>> get allFoodsStream => _allItemsSubject.stream;
 
   LikesCounter() {
-    likesController.stream.listen(changeLike);
+    _likesController.stream.listen(changeLike);
   }
 
   void dispose() {
-    items.close();
-    likesBehaviorSubject.close();
-    likesController.close();
+    _allItemsSubject.close();
+    _likesBehaviorSubject.close();
+    _likesController.close();
   }
 
   void changeLike(Food food) {
     if (!food.liked) {
       food.liked = true;
-      favoriteFoods.add(food);
-    } else{
+      _favFoods.add(food);
+    } else {
       food.liked = false;
-      favoriteFoods.remove(food);
+      _favFoods.remove(food);
     }
-    items.add(favoriteFoods);
-    likesBehaviorSubject.add(favoriteFoods.length);
+    _favItemsSubject.add(_favFoods);
+    _likesBehaviorSubject.add(_favFoods.length);
+  }
+
+  void setFoods(List<Food> foods) {
+    _allFoods.clear();
+    _allFoods.addAll(foods);
+    _allItemsSubject.add(_allFoods);
+  }
+
+  void addFood(Food food) {
+    _allFoods.insert(0, food);
+    _allItemsSubject.add(_allFoods);
   }
 }

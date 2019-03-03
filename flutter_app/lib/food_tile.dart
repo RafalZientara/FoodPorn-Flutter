@@ -46,7 +46,7 @@ class FoodTileState extends State<FoodTile> {
               children: <Widget>[
                 Text(widget.food.name),
                 StreamBuilder<int>(
-                  stream: Liker.of(context).likesCounter.likesCount,
+                  stream: Liker.of(context).likesCounter.likesCountStream,
                   builder: (context, snapshot) {
                     return IconButton(
                       icon: Icon(Icons.favorite),

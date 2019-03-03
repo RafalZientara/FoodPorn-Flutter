@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Liker(likesCounter: LikesCounter(),
+    return Liker(
+      likesCounter: LikesCounter(),
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -33,12 +34,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final foods = List<Food>();
-
-  void _incrementCounter() {
-    setState(() {
-//      Liker.of(context).likesCounter.addLike();
-    });
+  void _addRandomFood() {
+    var food = Food("id", 5, "name", "description", false, 1500, "picture");
+    Liker.of(context).likesCounter.addFood(food);
   }
 
   @override
@@ -53,10 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final parsed = json.decode(await input).cast<Map<String, dynamic>>();
     var list =
         parsed.map<Food>((json) => Food.fromJson(json)).toList() as List<Food>;
-    setState(() {
-      foods.clear();
-      foods.addAll(list);
-    });
+    Liker.of(context).likesCounter.setFoods(list);
   }
 
   @override
@@ -66,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: buildAppBar(liker),
       body: buildListView(),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _addRandomFood,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
@@ -87,12 +82,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.redAccent,
               ),
               StreamBuilder<int>(
-                initialData: 0,
-                stream: liker.likesCounter.likesCount,
-                builder: (context, snapshot) {
-                  return Text(snapshot.data.toString());
-                }
-              ),
+                  initialData: 0,
+                  stream: liker.likesCounter.likesCountStream,
+                  builder: (context, snapshot) {
+                    return Text(snapshot.data.toString());
+                  }),
             ],
           )
         ],
@@ -100,21 +94,19 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  ListView buildListView() {
-    return ListView.builder(
-      itemCount: foods.length,
-      itemBuilder: (context, index) {
-        return FoodTile(
-          food: foods[index],
-        );
-      },
-    );
-  }
-
-  void likeFood(int index) {
-    setState(() {
-      foods[index].liked = !foods[index].liked;
-
-    });
+  Widget buildListView() {
+    return StreamBuilder<List<Food>>(
+        initialData: [],
+        stream: Liker.of(context).likesCounter.allFoodsStream,
+        builder: (context, snapshot) {
+          return ListView.builder(
+            itemCount: snapshot.data.length,
+            itemBuilder: (context, index) {
+              return FoodTile(
+                food: snapshot.data[index],
+              );
+            },
+          );
+        });
   }
 }

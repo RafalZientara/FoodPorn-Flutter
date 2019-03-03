@@ -12,7 +12,7 @@ class Liker extends InheritedWidget {
 
   @override
   bool updateShouldNotify(Liker oldWidget) {
-    return oldWidget.likesCounter.likesCount != likesCounter.likesCount;
+    return oldWidget.likesCounter.likesCountStream != likesCounter.likesCountStream;
   }
 
   static Liker of(BuildContext context) =>
