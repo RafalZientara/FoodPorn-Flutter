@@ -34,9 +34,12 @@ class _FoodPageState extends State<FoodPage> {
         pinned: true,
         flexibleSpace: FlexibleSpaceBar(
             centerTitle: true,
-            background: Image.asset(
-              food.picture,
-              fit: BoxFit.cover,
+            background: Hero(
+              tag: "${food.index}_picture",
+              child: Image.asset(
+                food.picture,
+                fit: BoxFit.cover,
+              ),
             )),
       ),
     ];

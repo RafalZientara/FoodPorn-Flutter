@@ -36,7 +36,9 @@ class FoodTileState extends AnimatedState<FoodTile> {
             onDoubleTap: () {
               changeLike();
             },
-            child: Image.asset(widget.food.picture),
+            child: Hero(
+                tag: "${widget.food.index}_picture",
+                child: Image.asset(widget.food.picture)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
