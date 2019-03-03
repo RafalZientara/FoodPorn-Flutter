@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/data/liker.dart';
 import 'package:flutter_app/data/likes_counter.dart';
+import 'package:flutter_app/fav_icon.dart';
 import 'package:flutter_app/food_tile.dart';
 import 'package:flutter_app/model/food.dart';
 
@@ -70,28 +71,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
   AppBar buildAppBar(Liker liker) {
     return AppBar(
-      title: Container(
-          child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
+        title: Container(
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
           Text('Food porn'),
-          Row(
-            children: <Widget>[
-              Icon(
-                Icons.favorite,
-                color: Colors.redAccent,
-              ),
-              StreamBuilder<int>(
-                  initialData: 0,
-                  stream: liker.likesCounter.likesCountStream,
-                  builder: (context, snapshot) {
-                    return Text(snapshot.data.toString());
-                  }),
-            ],
-          )
-        ],
-      )),
-    );
+          StreamBuilder<int>(
+              initialData: 0,
+              stream: liker.likesCounter.likesCountStream,
+              builder: (context, snapshot) {
+                return FavIcon(itemCount: snapshot.data);
+              }),
+        ])));
   }
 
   Widget buildListView() {
