@@ -1,11 +1,11 @@
 class Food {
-  String id;
-  int index;
-  String name;
-  String description;
+  final String id;
+  final int index;
+  final String name;
+  final String description;
   bool liked;
-  int calories;
-  String picture;
+  final int calories;
+  final String picture;
 
   Food(this.id, this.index, this.name, this.description, this.liked, this.calories,
       this.picture);

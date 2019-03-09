@@ -23,6 +23,9 @@ class LikesCounter {
 
   LikesCounter() {
     _likesController.stream.listen(changeLike);
+    _allItemsSubject.add(_allFoods);
+    _favItemsSubject.add(_favFoods);
+    _likesBehaviorSubject.add(_favFoods.length);
   }
 
   void dispose() {
