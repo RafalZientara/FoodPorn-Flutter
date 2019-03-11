@@ -45,44 +45,46 @@ class _FoodPageState extends State<FoodPage> {
     ];
   }
 
-  Center _buildContent(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(
-                  food.name,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                ),
-                StreamBuilder<int>(
-                    stream: Liker.of(context)
-                        .likesCounter
-                        .likesCountStream
-                        .distinct(),
-                    builder: (context, snapshot) {
-                      return FavTileIcon(
-                        liked: food.liked,
-                        onPressed: () {
-                          changeLike();
-                        },
-                      );
-                    })
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("Calories: ${food.calories}",
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(food.description),
-            ),
-          ],
+  Widget _buildContent(BuildContext context) {
+    return SafeArea(
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text(
+                    food.name,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  StreamBuilder<int>(
+                      stream: Liker.of(context)
+                          .likesCounter
+                          .likesCountStream
+                          .distinct(),
+                      builder: (context, snapshot) {
+                        return FavTileIcon(
+                          liked: food.liked,
+                          onPressed: () {
+                            changeLike();
+                          },
+                        );
+                      })
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Calories: ${food.calories}",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(food.description),
+              ),
+            ],
+          ),
         ),
       ),
     );

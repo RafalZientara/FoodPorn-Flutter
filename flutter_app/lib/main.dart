@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var liker = Liker.of(context);
     return Scaffold(
       appBar: buildAppBar(liker),
-      body: buildListView(),
+      body: SafeArea(child: buildListView()),
       floatingActionButton: FloatingActionButton(
         onPressed: _addRandomFood,
         tooltip: 'Increment',
@@ -99,10 +99,12 @@ class _MyHomePageState extends State<MyHomePage> {
               initialData: 0,
               stream: liker.likesCounter.likesCountStream,
               builder: (context, snapshot) {
-                return FavIcon(itemCount: snapshot.data,
+                return FavIcon(
+                  itemCount: snapshot.data,
                   onPressed: () {
                     Navigator.of(context).pushNamed(FavPage.routeName);
-                  },);
+                  },
+                );
               }),
         ])));
   }
