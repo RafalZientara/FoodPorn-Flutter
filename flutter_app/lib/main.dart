@@ -19,11 +19,11 @@ class MyApp extends StatelessWidget {
     return Liker(
       likesCounter: LikesCounter(),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Food Porn',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: MyHomePage(title: 'Flutter Demo Home Page'),
+        home: MyHomePage(title: 'Food Porn Home'),
         routes: <String, WidgetBuilder>{
           FoodPage.routeName: (context) => FoodPage(),
           FavPage.routeName: (context) => FavPage(),
